@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommitActivity">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/action_bar_comments"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?actionBarSize">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@drawable/ic_back"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:textColor="#202020"-->
+            <!--android:text="Comments"-->
+            <!--android:textSize="20sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    <!--</LinearLayout>-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar_comments"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comments_list"
+        android:layout_below="@id/action_bar_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_commit"
+        />
+
+    
+    <RelativeLayout
+        android:padding="10dp"
+        android:id="@+id/bottom_commit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/img_commit_prof"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_commit_prof"
+            android:hint="Add a comment..."
+            android:id="@+id/add_commit_edittext"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:layout_toLeftOf="@id/post"
+            />
+        
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/post"
+            android:layout_alignParentRight="true"
+            android:text="POST"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/colorPrimary"
+            />
+        
+    </RelativeLayout>
+
+
+</RelativeLayout>
